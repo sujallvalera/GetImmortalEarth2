@@ -5,10 +5,10 @@ const axios = require("axios");
 const cors = require('cors');
 var fs = require('fs');
 app.use(cors());
-app.use(express.static(__dirname));
+app.use(express.static(__dirname + /homePage));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/homePage/index.html');    
+    res.sendFile(__dirname + '/index.html');    
 });
 
 app.get('/latestnews/:newsID', (req, resp) => {
