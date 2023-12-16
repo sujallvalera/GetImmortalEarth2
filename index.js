@@ -5,7 +5,7 @@ const axios = require("axios");
 const cors = require('cors');
 var fs = require('fs');
 app.use(cors());
-app.use(express.static(__dirname + "/public/"));
+app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');    
